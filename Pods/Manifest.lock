@@ -1,0 +1,19 @@
+PODS:
+  - Keys (1.0.0)
+  - youtube-ios-player-helper (0.1.4)
+
+DEPENDENCIES:
+  - Keys (from `Pods/CocoaPodsKeys`)
+  - youtube-ios-player-helper (~> 0.1.1)
+
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
+
+SPEC CHECKSUMS:
+  Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
+  youtube-ios-player-helper: 84b1485ebb4b7c6b619c6e05edcb55186723a7c6
+
+PODFILE CHECKSUM: 31431a589429039a7a957366e6adb765548a8f6d
+
+COCOAPODS: 1.0.1
