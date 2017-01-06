@@ -43,8 +43,15 @@
     // Initialize parse
     LiketochikuKeys *keys=[[LiketochikuKeys alloc] init] ;
         // Secret Id/Key, stored in keystore by cocoapods-keys
-    [Parse setApplicationId:keys.parseApplicationId
-                  clientKey:keys.parseClientKey];
+    
+    [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
+        configuration.applicationId = keys.parseApplicationId;
+        configuration.clientKey = keys.parseClientKey ;
+        configuration.server = @"https://parseapi.back4app.com/";
+    }]];
+    
+//    [Parse setApplicationId:keys.parseApplicationId
+//                  clientKey:keys.parseClientKey];
     
     // [PFUser enableAutomaticUser];
     PFACL *defaultACL = [PFACL ACL];
@@ -198,7 +205,12 @@ BOOL bAcceptOrientationLandscape = false ;
     bAcceptOrientationLandscape = flag ;
 }
 
-- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < 90000
+- (NSUInteger)
+#else
+- (UIInterfaceOrientationMask)
+#endif
+application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
     NSUInteger orientations = UIInterfaceOrientationMaskAll;
 
     if(self.window.rootViewController){

@@ -1,8 +1,8 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Keys" "${PODS_ROOT}/Headers/Public/youtube-ios-player-helper"
-LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Keys" "$PODS_CONFIGURATION_BUILD_DIR/youtube-ios-player-helper"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Keys" -isystem "${PODS_ROOT}/Headers/Public/youtube-ios-player-helper"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"Keys" -l"youtube-ios-player-helper" -framework "Foundation"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Bolts" "${PODS_ROOT}/Headers/Public/Harpy" "${PODS_ROOT}/Headers/Public/Keys" "${PODS_ROOT}/Headers/Public/Parse" "${PODS_ROOT}/Headers/Public/ParseUI" "${PODS_ROOT}/Headers/Public/SVProgressHUD" "${PODS_ROOT}/Headers/Public/youtube-ios-player-helper"
+LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Bolts" "$PODS_CONFIGURATION_BUILD_DIR/Harpy" "$PODS_CONFIGURATION_BUILD_DIR/Keys" "$PODS_CONFIGURATION_BUILD_DIR/Parse" "$PODS_CONFIGURATION_BUILD_DIR/ParseUI" "$PODS_CONFIGURATION_BUILD_DIR/SVProgressHUD" "$PODS_CONFIGURATION_BUILD_DIR/youtube-ios-player-helper"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Bolts" -isystem "${PODS_ROOT}/Headers/Public/Harpy" -isystem "${PODS_ROOT}/Headers/Public/Keys" -isystem "${PODS_ROOT}/Headers/Public/Parse" -isystem "${PODS_ROOT}/Headers/Public/ParseUI" -isystem "${PODS_ROOT}/Headers/Public/SVProgressHUD" -isystem "${PODS_ROOT}/Headers/Public/youtube-ios-player-helper"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Bolts" -l"Harpy" -l"Keys" -l"Parse" -l"ParseUI" -l"SVProgressHUD" -l"sqlite3" -l"youtube-ios-player-helper" -l"z" -framework "AudioToolbox" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreLocation" -framework "Foundation" -framework "QuartzCore" -framework "Security" -framework "StoreKit" -framework "SystemConfiguration" -framework "UIKit" -weak_framework "Accounts" -weak_framework "Social"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}/Pods

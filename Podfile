@@ -5,7 +5,11 @@ target 'liketochiku' do
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 
-pod "youtube-ios-player-helper", "~> 0.1.1"
+pod 'Parse'
+pod 'ParseUI'
+pod "youtube-ios-player-helper", "~> 0.1.6"
+pod 'Harpy'
+pod 'SVProgressHUD'
 
 plugin 'cocoapods-keys', {
   :project => "LikeTochiku",

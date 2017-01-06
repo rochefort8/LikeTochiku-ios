@@ -11,6 +11,8 @@
 @implementation QuizViewCell
 
 - (void)awakeFromNib {
+    [super awakeFromNib];    [super awakeFromNib];
+
     // Initialization code
 }
 

@@ -29,9 +29,10 @@ typedef void (^CallbackHandler)(NSError *error);
 
 @end
 
-int table[100];
+int t_table[100];
 
 @implementation TochikujiViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -224,19 +225,19 @@ int table[100];
             int rand = arc4random() % [self.tochikujiList count] ;
             int already_exist = 0 ;
             for (int j = 0;j < i;j++) {
-                if (table[j] == rand) {
+                if (t_table[j] == rand) {
                     already_exist = 1 ;
                     break ;
                 }
             }
             if (!already_exist) {
-                table[i] = rand ;
+                t_table[i] = rand ;
                 i++ ;
             }
         }
     } else {
         for (int i = 0;i < self.totalSlideImageCount;) {
-            table[i] = 0 ;
+            t_table[i] = 0 ;
         }
     }
 /*
@@ -248,7 +249,7 @@ int table[100];
         TochikujiContent *content = [self.slideList objectAtIndex:i] ;
         
         // Load object in full quiz list at random position
-        PFObject *object = [self.tochikujiList objectAtIndex:table[i]];
+        PFObject *object = [self.tochikujiList objectAtIndex:t_table[i]];
         content.object = object ;
         [self.slideList replaceObjectAtIndex:i withObject:content];
     }

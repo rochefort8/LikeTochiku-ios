@@ -18,16 +18,13 @@ case "${TARGETED_DEVICE_FAMILY}" in
   2)
     TARGET_DEVICE_ARGS="--target-device ipad"
     ;;
+  3)
+    TARGET_DEVICE_ARGS="--target-device tv"
+    ;;
   *)
     TARGET_DEVICE_ARGS="--target-device mac"
     ;;
 esac
-
-realpath() {
-  DIRECTORY="$(cd "${1%/*}" && pwd)"
-  FILENAME="${1##*/}"
-  echo "$DIRECTORY/$FILENAME"
-}
 
 install_resource()
 {
@@ -70,7 +67,7 @@ EOM
       xcrun mapc "$RESOURCE_PATH" "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename "$RESOURCE_PATH" .xcmappingmodel`.cdm"
       ;;
     *.xcassets)
-      ABSOLUTE_XCASSET_FILE=$(realpath "$RESOURCE_PATH")
+      ABSOLUTE_XCASSET_FILE="$RESOURCE_PATH"
       XCASSET_FILES+=("$ABSOLUTE_XCASSET_FILE")
       ;;
     *)
@@ -80,10 +77,22 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "$PODS_CONFIGURATION_BUILD_DIR/youtube-ios-player-helper/Assets.bundle"
+  install_resource "Harpy/Harpy/Harpy.bundle"
+  install_resource "Parse/Parse/Resources/en.lproj"
+  install_resource "ParseUI/ParseUI/Resources/Localization/en.lproj"
+  install_resource "ParseUI/ParseUI/Resources/Localization/fr.lproj"
+  install_resource "ParseUI/ParseUI/Resources/Localization/pt-BR.lproj"
+  install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "youtube-ios-player-helper/youtube-ios-player-helper/Assets.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "$PODS_CONFIGURATION_BUILD_DIR/youtube-ios-player-helper/Assets.bundle"
+  install_resource "Harpy/Harpy/Harpy.bundle"
+  install_resource "Parse/Parse/Resources/en.lproj"
+  install_resource "ParseUI/ParseUI/Resources/Localization/en.lproj"
+  install_resource "ParseUI/ParseUI/Resources/Localization/fr.lproj"
+  install_resource "ParseUI/ParseUI/Resources/Localization/pt-BR.lproj"
+  install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "youtube-ios-player-helper/youtube-ios-player-helper/Assets.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
@@ -99,7 +108,7 @@ then
   # Find all other xcassets (this unfortunately includes those of path pods and other targets).
   OTHER_XCASSETS=$(find "$PWD" -iname "*.xcassets" -type d)
   while read line; do
-    if [[ $line != "`realpath $PODS_ROOT`*" ]]; then
+    if [[ $line != "${PODS_ROOT}*" ]]; then
       XCASSET_FILES+=("$line")
     fi
   done <<<"$OTHER_XCASSETS"

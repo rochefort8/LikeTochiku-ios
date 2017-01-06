@@ -11,6 +11,7 @@
 @implementation SchoolRouteListCell
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
     // Initialization code
 }
 
