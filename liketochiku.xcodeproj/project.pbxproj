@@ -263,6 +263,7 @@
 		02744EA71B1B2D8800FF8962 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		02744EAC1B1C530400FF8962 /* NSString+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utilities.h"; sourceTree = "<group>"; };
 		02744EAD1B1C530400FF8962 /* NSString+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utilities.m"; sourceTree = "<group>"; };
+		0276BDE01E20724200C8111F /* liketochiku.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = liketochiku.entitlements; sourceTree = "<group>"; };
 		027B00001AF53792000144EC /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		027B00011AF53792000144EC /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		027B00051AF53792000144EC /* UmanatsuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UmanatsuViewController.h; sourceTree = "<group>"; };
@@ -582,6 +583,7 @@
 		0243FA621AF530B3009D959E /* liketochiku */ = {
 			isa = PBXGroup;
 			children = (
+				0276BDE01E20724200C8111F /* liketochiku.entitlements */,
 				02B5751E1AFCDC3C00AF1A1B /* External */,
 				027BFFF61AF53792000144EC /* Classes */,
 				027B002C1AF5C0FD000144EC /* Framework */,
@@ -1133,6 +1135,9 @@
 							com.apple.InAppPurchase = {
 								enabled = 0;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 					0243FA781AF530B3009D959E = {
@@ -1601,6 +1606,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = liketochiku/liketochiku.entitlements;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1630,6 +1636,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = liketochiku/liketochiku.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Yuji Ogihara (DB56ZJ587B)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yuji Ogihara (DB56ZJ587B)";
 				DEVELOPMENT_TEAM = DB56ZJ587B;
