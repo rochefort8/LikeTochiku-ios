@@ -49,7 +49,6 @@
 		027B003A1AF5C271000144EC /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 027B00391AF5C271000144EC /* libsqlite3.dylib */; };
 		027B003C1AF5C285000144EC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027B003B1AF5C285000144EC /* SystemConfiguration.framework */; };
 		027B00401AF5C2A8000144EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027B003F1AF5C2A8000144EC /* QuartzCore.framework */; };
-		027B00421AF5C2B6000144EC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 027B00411AF5C2B6000144EC /* libz.dylib */; };
 		027B00461AF63780000144EC /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027B00451AF63780000144EC /* Quiz.storyboard */; };
 		027B00491AF63C09000144EC /* QuizQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 027B00481AF63C09000144EC /* QuizQuestionViewController.m */; };
 		027BFFEC1AF5363F000144EC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027BFFEB1AF5363F000144EC /* Home.storyboard */; };
@@ -280,7 +279,6 @@
 		027B00391AF5C271000144EC /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		027B003B1AF5C285000144EC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		027B003F1AF5C2A8000144EC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		027B00411AF5C2B6000144EC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		027B00451AF63780000144EC /* Quiz.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Quiz.storyboard; path = ../../Resources/Storyboards/Quiz.storyboard; sourceTree = "<group>"; };
 		027B00471AF63C09000144EC /* QuizQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizQuestionViewController.h; sourceTree = "<group>"; };
 		027B00481AF63C09000144EC /* QuizQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizQuestionViewController.m; sourceTree = "<group>"; };
@@ -496,7 +494,6 @@
 			files = (
 				02AC09021AFF6DC200A93F09 /* Social.framework in Frameworks */,
 				02AC09001AFF6DB400A93F09 /* Accounts.framework in Frameworks */,
-				027B00421AF5C2B6000144EC /* libz.dylib in Frameworks */,
 				027B00401AF5C2A8000144EC /* QuartzCore.framework in Frameworks */,
 				027B003C1AF5C285000144EC /* SystemConfiguration.framework in Frameworks */,
 				027B003A1AF5C271000144EC /* libsqlite3.dylib in Frameworks */,
@@ -562,7 +559,6 @@
 		0243FA571AF530B3009D959E = {
 			isa = PBXGroup;
 			children = (
-				027B00411AF5C2B6000144EC /* libz.dylib */,
 				0243FA621AF530B3009D959E /* liketochiku */,
 				0243FA7C1AF530B3009D959E /* liketochikuTests */,
 				0243FA611AF530B3009D959E /* Products */,
